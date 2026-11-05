@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink-soft: #FFE6EE;
+  --pink-light: #FFD1E0;
+  --pink-medium: #FF97B7;
+  --pink-deep: #FF6B95;
+  --cream: #FFF5F9;
+  --yellow-bright: #FFD124;
+  --red-glossy: #E63946;
+  --charcoal: #4A4A4A;
+  --gold-bright: #FFD700;
+  --white-soft: #FFFAFC;
+  --shadow-soft: 0 8px 24px rgba(255, 107, 149, 0.15);
+  --shadow-button: 0 6px 16px rgba(230, 57, 70, 0.25);
+  --radius-soft: 20px;
+  --radius-pill: 50px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #FFE6EE 0%, #FFD9E8 50%, #FFEAF2 100%);
+  min-height: 100vh;
+  color: var(--charcoal);
+}
+
+/* Card — yung bilog at malambot na kahon */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-soft);
+  padding: 24px;
+  margin: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Pera — malaki at matapang na sulat */
+.balance-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--pink-deep);
+}
+
+/* Dilaw na badge */
+.badge-yellow {
+  display: inline-block;
+  background: var(--yellow-bright);
+  color: #333;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+}
+
+/* Pulang buton — Cash In / Deposit */
+.btn-red {
+  background: linear-gradient(145deg, #FF5C70, #E63946);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--radius-pill);
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  box-shadow: var(--shadow-button);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn-red:hover {
+  transform: translateY(-2px);
+}
+
+/* Cream na buton — Recharge */
+.btn-cream {
+  background: rgba(255, 253, 240, 0.9);
+  color: var(--charcoal);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 14px 24px;
+  border-radius: var(--radius-soft);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-cream:hover {
+  background: #FFF8E8;
+}
+
+/* Madilim na buton — Withdraw */
+.btn-dark {
+  background: rgba(74, 74, 74, 0.85);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: var(--radius-soft);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-dark:hover {
+  background: rgba(50, 50, 50, 0.9);
+}
+
+/* Ilalim na nabigasyon */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -2px 16px rgba(255, 107, 149, 0.1);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.bottom-nav button.active {
+  color: var(--pink-deep);
+  font-weight: 600;
+}
+
+/* Porma ng pagsusulat */
+input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--pink-soft);
+  border-radius: 14px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  outline: none;
+  background: white;
+}
+input:focus {
+  border-color: var(--pink-medium);
+}
+
+h1, h2, h3 {
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Espasyo sa ilalim para sa nabigasyon */
+.page-container {
+  padding-bottom: 90px;
+}
